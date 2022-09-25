@@ -16,6 +16,7 @@ public class DuckSimulator {
 
     Quack quack = new Quack();
     Squeak squeak = new Squeak();
+    MuteQuack muteQuack = new MuteQuack();
 
     MallardDuck mallardDuck = new MallardDuck(flyWithWings, quack);
     performActions(mallardDuck);
@@ -23,6 +24,11 @@ public class DuckSimulator {
     System.out.println();
 
     RubberDuck rubberDuck = new RubberDuck(flyWithRockets, squeak);
+    performActions(rubberDuck);
+
+    // Change rubberDuck's quack behavior at runtime
+    rubberDuck.setQuackBehavior(muteQuack);
+    System.out.println("\nRubber Duck's quack behavior has been changed");
     performActions(rubberDuck);
   }
 

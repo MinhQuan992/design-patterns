@@ -4,8 +4,8 @@ import org.example.intro.algorithm.interfaces.IFlyBehavior;
 import org.example.intro.algorithm.interfaces.IQuackBehavior;
 
 public abstract class Duck {
-  private final IFlyBehavior flyBehavior;
-  private final IQuackBehavior quackBehavior;
+  private IFlyBehavior flyBehavior;
+  private IQuackBehavior quackBehavior;
 
   public Duck(IFlyBehavior flyBehavior, IQuackBehavior quackBehavior) {
     this.flyBehavior = flyBehavior;
@@ -26,5 +26,13 @@ public abstract class Duck {
   // DELEGATE its quack behavior
   public void performQuack() {
     quackBehavior.quack();
+  }
+
+  public void setFlyBehavior(IFlyBehavior flyBehavior) {
+    this.flyBehavior = flyBehavior;
+  }
+
+  public void setQuackBehavior(IQuackBehavior quackBehavior) {
+    this.quackBehavior = quackBehavior;
   }
 }
