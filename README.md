@@ -3,6 +3,7 @@
 ## 1. About this project
 This project contains many sample codes for demonstrating the usage of the following design patterns:
 
+- [x] [The Strategy Pattern](./01-strategy/README.md).
 - [ ] The Observer Pattern.
 - [ ] The Decorator Pattern.
 - [ ] The Factory Pattern.
