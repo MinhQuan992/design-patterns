@@ -6,7 +6,12 @@
 
   <groupId>org.example</groupId>
   <artifactId>design-patterns</artifactId>
+  <packaging>pom</packaging>
   <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>01-strategy</module>
+    <module>02-observer</module>
+  </modules>
 
   <name>design-patterns</name>
   <!-- FIXME change it to the project's website -->
