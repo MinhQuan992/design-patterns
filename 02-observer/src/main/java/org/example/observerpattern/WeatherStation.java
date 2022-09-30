@@ -2,6 +2,7 @@ package org.example.observerpattern;
 
 import org.example.observerpattern.observer.CurrentConditionsDisplay;
 import org.example.observerpattern.observer.ForecastDisplay;
+import org.example.observerpattern.observer.HeatIndexDisplay;
 import org.example.observerpattern.observer.StatisticsDisplay;
 import org.example.observerpattern.subject.WeatherData;
 
@@ -12,6 +13,7 @@ public class WeatherStation {
     CurrentConditionsDisplay currentConditionsDisplay = new CurrentConditionsDisplay(weatherData);
     StatisticsDisplay statisticsDisplay = new StatisticsDisplay(weatherData);
     ForecastDisplay forecastDisplay = new ForecastDisplay(weatherData);
+    HeatIndexDisplay heatIndexDisplay = new HeatIndexDisplay(weatherData);
 
     weatherData.setMeasurements(80, 65, 30.4f);
     System.out.println();
