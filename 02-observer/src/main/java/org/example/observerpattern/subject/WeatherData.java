@@ -2,8 +2,10 @@ package org.example.observerpattern.subject;
 
 import java.util.ArrayList;
 import java.util.List;
+import lombok.Getter;
 import org.example.observerpattern.observer.IObserver;
 
+@Getter
 public class WeatherData implements ISubject {
   private final List<IObserver> observers;
   private float temperature;
@@ -27,7 +29,7 @@ public class WeatherData implements ISubject {
   @Override
   public void notifyObservers() {
     for (IObserver observer : observers) {
-      observer.update(temperature, humidity, pressure);
+      observer.update();
     }
   }
 

@@ -3,10 +3,12 @@ package org.example.observerpattern.observer;
 import org.example.observerpattern.subject.WeatherData;
 
 public class HeatIndexDisplay implements IObserver, IDisplayElement {
+  private final WeatherData weatherData;
   private float temperature;
   private float relativeHumidity;
 
   public HeatIndexDisplay(WeatherData weatherData) {
+    this.weatherData = weatherData;
     weatherData.registerObserver(this);
   }
 
@@ -22,9 +24,9 @@ public class HeatIndexDisplay implements IObserver, IDisplayElement {
   }
 
   @Override
-  public void update(float temp, float humidity, float pressure) {
-    this.temperature = temp;
-    this.relativeHumidity = humidity;
+  public void update() {
+    this.temperature = weatherData.getTemperature();
+    this.relativeHumidity = weatherData.getHumidity();
     display();
   }
 

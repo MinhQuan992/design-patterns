@@ -3,17 +3,19 @@ package org.example.observerpattern.observer;
 import org.example.observerpattern.subject.WeatherData;
 
 public class ForecastDisplay implements IObserver, IDisplayElement {
+  private final WeatherData weatherData;
   private float currentPressure = 29.9f;
   private float lastPressure;
 
   public ForecastDisplay(WeatherData weatherData) {
+    this.weatherData = weatherData;
     weatherData.registerObserver(this);
   }
 
   @Override
-  public void update(float temp, float humidity, float pressure) {
+  public void update() {
     lastPressure = currentPressure;
-    currentPressure = pressure;
+    currentPressure = weatherData.getPressure();
     display();
   }
 

@@ -3,17 +3,20 @@ package org.example.observerpattern.observer;
 import org.example.observerpattern.subject.WeatherData;
 
 public class StatisticsDisplay implements IObserver, IDisplayElement {
+  private final WeatherData weatherData;
   private float maxTemperature = 0.0f;
   private float minTemperature = 200;
   private float temperatureSum = 0.0f;
   private int numberOfReadings;
 
   public StatisticsDisplay(WeatherData weatherData) {
+    this.weatherData = weatherData;
     weatherData.registerObserver(this);
   }
 
   @Override
-  public void update(float temp, float humidity, float pressure) {
+  public void update() {
+    float temp = weatherData.getTemperature();
     temperatureSum += temp;
     numberOfReadings++;
     if (temp > maxTemperature) {
