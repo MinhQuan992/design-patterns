@@ -1,7 +1,7 @@
-package org.example.factorypattern.pizzastore;
+package org.example.factorypattern.creator;
 
-import org.example.factorypattern.pizza.NYStyleCheesePizza;
-import org.example.factorypattern.pizza.Pizza;
+import org.example.factorypattern.product.NYStyleCheesePizza;
+import org.example.factorypattern.product.Pizza;
 
 public class NYPizzaStore extends PizzaStore {
   @Override

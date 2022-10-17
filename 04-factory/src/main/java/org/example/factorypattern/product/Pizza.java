@@ -1,4 +1,4 @@
-package org.example.factorypattern.pizza;
+package org.example.factorypattern.product;
 
 import java.util.ArrayList;
 import java.util.List;

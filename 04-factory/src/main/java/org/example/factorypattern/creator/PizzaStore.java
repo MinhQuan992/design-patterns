@@ -1,6 +1,6 @@
-package org.example.factorypattern.pizzastore;
+package org.example.factorypattern.creator;
 
-import org.example.factorypattern.pizza.Pizza;
+import org.example.factorypattern.product.Pizza;
 
 public abstract class PizzaStore {
   protected abstract Pizza createPizza(PizzaType type);

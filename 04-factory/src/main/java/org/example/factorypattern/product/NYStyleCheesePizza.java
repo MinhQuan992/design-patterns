@@ -1,4 +1,4 @@
-package org.example.factorypattern.pizza;
+package org.example.factorypattern.product;
 
 public class NYStyleCheesePizza extends Pizza {
   public NYStyleCheesePizza() {
