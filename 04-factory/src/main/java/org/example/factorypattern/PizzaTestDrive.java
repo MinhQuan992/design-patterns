@@ -1,10 +1,10 @@
 package org.example.factorypattern;
 
-import org.example.factorypattern.product.Pizza;
-import org.example.factorypattern.creator.ChicagoPizzaStore;
-import org.example.factorypattern.creator.NYPizzaStore;
-import org.example.factorypattern.creator.PizzaStore;
-import org.example.factorypattern.creator.PizzaType;
+import org.example.factorypattern.product.pizza.Pizza;
+import org.example.factorypattern.creator.pizza.ChicagoPizzaStore;
+import org.example.factorypattern.creator.pizza.NYPizzaStore;
+import org.example.factorypattern.creator.pizza.PizzaStore;
+import org.example.factorypattern.creator.pizza.PizzaType;
 
 public class PizzaTestDrive {
   public static void main(String[] args) {
