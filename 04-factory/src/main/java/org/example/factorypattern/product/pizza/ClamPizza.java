@@ -12,7 +12,9 @@ public class ClamPizza extends Pizza {
     System.out.println("Preparing " + name);
     dough = ingredientFactory.createDough();
     sauce = ingredientFactory.createSauce();
+    veggies = ingredientFactory.createVeggies();
     cheese = ingredientFactory.createCheese();
     clam = ingredientFactory.createClam();
+    showIngredients();
   }
 }
