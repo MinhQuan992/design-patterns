@@ -6,7 +6,7 @@ This project contains many sample codes for demonstrating the usage of the follo
 - [x] [The Strategy Pattern](./01-strategy/README.md).
 - [x] [The Observer Pattern](./02-observer/README.md).
 - [x] [The Decorator Pattern](./03-decorator/README.md).
-- [ ] The Factory Pattern.
+- [x] [The Factory Pattern](./04-factory/README.md).
 - [ ] The Singleton Pattern.
 - [ ] The Command Pattern.
 - [ ] The Adapter and Facade Patterns.
@@ -26,3 +26,4 @@ This project contains many sample codes for demonstrating the usage of the follo
 - Program to interfaces, not implementations.
 - Strive for loosely coupled designs between objects that interact.
 - Classes should be open for extension but closed for modification.
+- Depend upon abstractions. Do not depend upon concrete classes.
