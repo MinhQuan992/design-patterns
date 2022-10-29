@@ -1,6 +1,5 @@
 # THE DECORATOR PATTERN
-
-# Decorating Objects
+## Decorating Objects
 
 ## 1. The Problem
 
