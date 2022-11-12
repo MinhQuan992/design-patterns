@@ -13,6 +13,7 @@
     <module>02-observer</module>
     <module>03-decorator</module>
     <module>04-factory</module>
+    <module>05-singleton</module>
   </modules>
 
   <name>design-patterns</name>
