@@ -7,7 +7,7 @@ This project contains many sample codes for demonstrating the usage of the follo
 - [x] [The Observer Pattern](./02-observer/README.md).
 - [x] [The Decorator Pattern](./03-decorator/README.md).
 - [x] [The Factory Pattern](./04-factory/README.md).
-- [ ] The Singleton Pattern.
+- [x] [The Singleton Pattern](./05-singleton/README.md).
 - [ ] The Command Pattern.
 - [ ] The Adapter and Facade Patterns.
 - [ ] The Template Method Pattern.
