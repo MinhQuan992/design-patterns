@@ -14,6 +14,7 @@
     <module>03-decorator</module>
     <module>04-factory</module>
     <module>05-singleton</module>
+    <module>06-command</module>
   </modules>
 
   <name>design-patterns</name>
