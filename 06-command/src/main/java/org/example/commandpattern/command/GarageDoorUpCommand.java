@@ -2,10 +2,10 @@ package org.example.commandpattern.command;
 
 import org.example.commandpattern.receiver.GarageDoor;
 
-public class GarageDoorOpenCommand implements ICommand {
+public class GarageDoorUpCommand implements ICommand {
   private final GarageDoor garageDoor;
 
-  public GarageDoorOpenCommand(GarageDoor garageDoor) {
+  public GarageDoorUpCommand(GarageDoor garageDoor) {
     this.garageDoor = garageDoor;
   }
 
