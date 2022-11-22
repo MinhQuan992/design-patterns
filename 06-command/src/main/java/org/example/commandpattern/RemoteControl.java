@@ -6,6 +6,7 @@ import org.example.commandpattern.command.NoCommand;
 public class RemoteControl {
   private final ICommand[] onCommands;
   private final ICommand[] offCommands;
+  private ICommand previousCommand;
 
   public RemoteControl() {
     onCommands = new ICommand[7];
@@ -16,6 +17,8 @@ public class RemoteControl {
       onCommands[i] = noCommand;
       offCommands[i] = noCommand;
     }
+
+    previousCommand = noCommand;
   }
 
   public void setCommand(int slot, ICommand onCommand, ICommand offCommand) {
@@ -25,10 +28,16 @@ public class RemoteControl {
 
   public void onButtonWasPushed(int slot) {
     onCommands[slot].execute();
+    previousCommand = onCommands[slot];
   }
 
   public void offButtonWasPushed(int slot) {
     offCommands[slot].execute();
+    previousCommand = offCommands[slot];
+  }
+
+  public void undoButtonWasPushed() {
+    previousCommand.undo();
   }
 
   @Override
@@ -39,6 +48,10 @@ public class RemoteControl {
       stringBuilder.append(String.format(slotDescriptionFormat,
           i, onCommands[i].getClass().getSimpleName(), offCommands[i].getClass().getSimpleName()));
     }
+    stringBuilder
+        .append("[Undo]\t")
+        .append(previousCommand.getClass().getSimpleName())
+        .append("\n");
     return stringBuilder.toString();
   }
 }

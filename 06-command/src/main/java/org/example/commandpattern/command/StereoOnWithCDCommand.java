@@ -18,6 +18,6 @@ public class StereoOnWithCDCommand implements ICommand {
 
   @Override
   public void undo() {
-
+    stereo.off();
   }
 }

@@ -16,6 +16,8 @@ public class StereoOffCommand implements ICommand {
 
   @Override
   public void undo() {
-
+    stereo.on();
+    stereo.setCD();
+    stereo.setVolume(11);
   }
 }

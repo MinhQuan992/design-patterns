@@ -15,6 +15,6 @@ public class GarageDoorDownCommand implements ICommand {
 
   @Override
   public void undo() {
-
+    garageDoor.up();
   }
 }

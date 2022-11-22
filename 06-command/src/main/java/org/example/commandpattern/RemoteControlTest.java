@@ -1,7 +1,7 @@
 package org.example.commandpattern;
 
 import org.example.commandpattern.command.CeilingFanOffCommand;
-import org.example.commandpattern.command.CeilingFanOnCommand;
+import org.example.commandpattern.command.CeilingFanHighCommand;
 import org.example.commandpattern.command.GarageDoorDownCommand;
 import org.example.commandpattern.command.GarageDoorUpCommand;
 import org.example.commandpattern.command.LightOffCommand;
@@ -31,7 +31,7 @@ public class RemoteControlTest {
     LightOnCommand kitchenLightOn = new LightOnCommand(kitchenLight);
     LightOffCommand kitchenLightOff = new LightOffCommand(kitchenLight);
 
-    CeilingFanOnCommand ceilingFanOn = new CeilingFanOnCommand(ceilingFan);
+    CeilingFanHighCommand ceilingFanOn = new CeilingFanHighCommand(ceilingFan);
     CeilingFanOffCommand ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
 
     GarageDoorUpCommand garageDoorUp = new GarageDoorUpCommand(garageDoor);
