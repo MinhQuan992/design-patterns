@@ -26,5 +26,7 @@ public class RemoteControlTestWithUndo {
     remoteControl.onButtonWasPushed(1);
     System.out.println(remoteControl);
     remoteControl.undoButtonWasPushed();
+    remoteControl.undoButtonWasPushed();
+    remoteControl.undoButtonWasPushed();
   }
 }

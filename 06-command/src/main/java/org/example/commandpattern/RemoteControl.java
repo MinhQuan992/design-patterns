@@ -1,12 +1,14 @@
 package org.example.commandpattern;
 
+import java.util.List;
+import java.util.Stack;
 import org.example.commandpattern.command.ICommand;
 import org.example.commandpattern.command.NoCommand;
 
 public class RemoteControl {
   private final ICommand[] onCommands;
   private final ICommand[] offCommands;
-  private ICommand previousCommand;
+  private final Stack<ICommand> previousCommands;
 
   public RemoteControl() {
     onCommands = new ICommand[7];
@@ -18,7 +20,8 @@ public class RemoteControl {
       offCommands[i] = noCommand;
     }
 
-    previousCommand = noCommand;
+    previousCommands = new Stack<>();
+    previousCommands.push(noCommand);
   }
 
   public void setCommand(int slot, ICommand onCommand, ICommand offCommand) {
@@ -28,16 +31,19 @@ public class RemoteControl {
 
   public void onButtonWasPushed(int slot) {
     onCommands[slot].execute();
-    previousCommand = onCommands[slot];
+    previousCommands.push(onCommands[slot]);
   }
 
   public void offButtonWasPushed(int slot) {
     offCommands[slot].execute();
-    previousCommand = offCommands[slot];
+    previousCommands.push(offCommands[slot]);
   }
 
   public void undoButtonWasPushed() {
-    previousCommand.undo();
+    if (previousCommands.peek() instanceof NoCommand) {
+      System.out.println("No actions left to undo");
+    }
+    previousCommands.pop().undo();
   }
 
   @Override
@@ -50,8 +56,16 @@ public class RemoteControl {
     }
     stringBuilder
         .append("[Undo]\t")
-        .append(previousCommand.getClass().getSimpleName())
+        .append(showPreviousCommands())
         .append("\n");
     return stringBuilder.toString();
+  }
+
+  private String showPreviousCommands() {
+    List<String> previousCommandsInString = previousCommands
+        .stream()
+        .map(command -> command.getClass().getSimpleName())
+        .toList();
+    return String.join(", ", previousCommandsInString);
   }
 }
