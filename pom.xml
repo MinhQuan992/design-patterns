@@ -15,6 +15,7 @@
     <module>04-factory</module>
     <module>05-singleton</module>
     <module>06-command</module>
+    <module>07-adapter-facade</module>
   </modules>
 
   <name>design-patterns</name>
