@@ -9,7 +9,7 @@ This project contains many sample codes for demonstrating the usage of the follo
 - [x] [The Factory Pattern](./04-factory/README.md).
 - [x] [The Singleton Pattern](./05-singleton/README.md).
 - [x] [The Command Pattern](./06-command/README.md).
-- [ ] The Adapter and Facade Patterns.
+- [x] [The Adapter and Facade Patterns](./07-adapter-facade/README.md).
 - [ ] The Template Method Pattern.
 - [ ] The Iterator and Composite Patterns.
 - [ ] The State Pattern.
@@ -27,3 +27,4 @@ This project contains many sample codes for demonstrating the usage of the follo
 - Strive for loosely coupled designs between objects that interact.
 - Classes should be open for extension but closed for modification.
 - Depend upon abstractions. Do not depend upon concrete classes.
+- Principle of Least Knowledge: talk only to your immediate friends (see demonstrations [here](./07-adapter-facade/README.md) for more details).
