@@ -16,6 +16,7 @@
     <module>05-singleton</module>
     <module>06-command</module>
     <module>07-adapter-facade</module>
+    <module>08-template-method</module>
   </modules>
 
   <name>design-patterns</name>
