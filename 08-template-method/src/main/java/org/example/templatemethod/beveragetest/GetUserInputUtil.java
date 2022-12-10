@@ -1,4 +1,4 @@
-package org.example.templatemethod;
+package org.example.templatemethod.beveragetest;
 
 import java.io.BufferedReader;
 import java.io.IOException;

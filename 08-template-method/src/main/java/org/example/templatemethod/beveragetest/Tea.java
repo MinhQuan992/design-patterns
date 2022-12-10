@@ -1,4 +1,4 @@
-package org.example.templatemethod;
+package org.example.templatemethod.beveragetest;
 
 public class Tea extends CaffeineBeverage {
   @Override

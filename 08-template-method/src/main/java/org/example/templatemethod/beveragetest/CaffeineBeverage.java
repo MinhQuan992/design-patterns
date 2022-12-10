@@ -1,4 +1,4 @@
-package org.example.templatemethod;
+package org.example.templatemethod.beveragetest;
 
 public abstract class CaffeineBeverage {
   final void prepareRecipe() {

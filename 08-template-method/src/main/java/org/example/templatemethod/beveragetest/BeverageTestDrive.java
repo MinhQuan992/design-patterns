@@ -1,4 +1,4 @@
-package org.example.templatemethod;
+package org.example.templatemethod.beveragetest;
 
 public class BeverageTestDrive {
   public static void main(String[] args) {
