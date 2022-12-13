@@ -2,6 +2,11 @@ package org.example.iteratorcomposite.iterator;
 
 public class MenuTestDrive {
   public static void main(String[] args) {
-    System.out.println("Hello World");
+    PancakeHouseMenu pancakeHouseMenu = new PancakeHouseMenu();
+    DinerMenu dinerMenu = new DinerMenu();
+
+    Waitress waitress = new Waitress(pancakeHouseMenu, dinerMenu);
+
+    waitress.printMenu();
   }
 }
