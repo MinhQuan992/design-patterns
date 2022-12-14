@@ -1,6 +1,8 @@
 package org.example.iteratorcomposite.iterator;
 
-public class DinerMenuIterator implements Iterator {
+import java.util.Iterator;
+
+public class DinerMenuIterator implements Iterator<MenuItem> {
   private final MenuItem[] items;
   private int position = 0;
 

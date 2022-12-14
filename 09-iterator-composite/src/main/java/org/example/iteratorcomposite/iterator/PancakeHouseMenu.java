@@ -1,9 +1,10 @@
 package org.example.iteratorcomposite.iterator;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
-public class PancakeHouseMenu {
+public class PancakeHouseMenu implements Menu {
   private final List<MenuItem> menuItems;
 
   public PancakeHouseMenu() {
@@ -35,7 +36,8 @@ public class PancakeHouseMenu {
     menuItems.add(menuItem);
   }
 
-  public Iterator createIterator() {
-    return new PancakeHouseMenuIterator(menuItems);
+  @Override
+  public Iterator<MenuItem> createIterator() {
+    return menuItems.iterator();
   }
 }
