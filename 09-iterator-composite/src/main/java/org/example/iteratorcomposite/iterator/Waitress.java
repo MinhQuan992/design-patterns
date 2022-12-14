@@ -5,8 +5,8 @@ import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class Waitress {
-  private final PancakeHouseMenu pancakeHouseMenu;
-  private final DinerMenu dinerMenu;
+  private final Menu pancakeHouseMenu;
+  private final Menu dinerMenu;
 
   public void printMenu() {
     Iterator<MenuItem> pancakeHouseIterator = pancakeHouseMenu.createIterator();
