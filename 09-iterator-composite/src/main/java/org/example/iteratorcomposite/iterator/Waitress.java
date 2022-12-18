@@ -1,25 +1,17 @@
 package org.example.iteratorcomposite.iterator;
 
 import java.util.Iterator;
+import java.util.List;
 import lombok.RequiredArgsConstructor;
 
 @RequiredArgsConstructor
 public class Waitress {
-  private final Menu pancakeHouseMenu;
-  private final Menu dinerMenu;
-  private final Menu cafeMenu;
+  private final List<Menu> menus;
 
   public void printMenu() {
-    Iterator<MenuItem> pancakeHouseIterator = pancakeHouseMenu.createIterator();
-    Iterator<MenuItem> dinerMenuIterator = dinerMenu.createIterator();
-    Iterator<MenuItem> cafeMenuIterator = cafeMenu.createIterator();
-
-    System.out.println("MENU\n----\nBREAKFAST");
-    printMenu(pancakeHouseIterator);
-    System.out.println("\nLUNCH");
-    printMenu(dinerMenuIterator);
-    System.out.println("\nDINNER");
-    printMenu(cafeMenuIterator);
+    for (Menu menu : menus) {
+      printMenu(menu.createIterator());
+    }
   }
 
   public void printMenu(Iterator<MenuItem> iterator) {
