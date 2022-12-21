@@ -11,7 +11,7 @@ This project contains many sample codes for demonstrating the usage of the follo
 - [x] [The Command Pattern](./06-command/README.md).
 - [x] [The Adapter and Facade Patterns](./07-adapter-facade/README.md).
 - [x] [The Template Method Pattern](./08-template-method/README.md).
-- [ ] The Iterator and Composite Patterns.
+- [x] [The Iterator and Composite Patterns](./09-iterator-composite/README.md).
 - [ ] The State Pattern.
 - [ ] The Proxy Pattern.
 
@@ -29,3 +29,4 @@ This project contains many sample codes for demonstrating the usage of the follo
 - Depend upon abstractions. Do not depend upon concrete classes.
 - Principle of Least Knowledge: talk only to your immediate friends (see demonstrations [here](./07-adapter-facade/README.md) for more details).
 - The Hollywood Principle: don't call us, we'll call you (see demonstrations [here](./08-template-method/README.md) for more details).
+- The Single Responsibility Principle: a class should have only one reason to change.
