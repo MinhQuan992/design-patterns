@@ -17,6 +17,7 @@
     <module>06-command</module>
     <module>07-adapter-facade</module>
     <module>08-template-method</module>
+    <module>09-iterator-composite</module>
   </modules>
 
   <name>design-patterns</name>
