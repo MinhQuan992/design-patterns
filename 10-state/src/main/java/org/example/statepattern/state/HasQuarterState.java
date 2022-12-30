@@ -1,9 +1,11 @@
 package org.example.statepattern.state;
 
+import java.util.Random;
 import org.example.statepattern.context.GumballMachine;
 
 public class HasQuarterState implements GumballMachineState {
   private final GumballMachine gumballMachine;
+  private final Random randomWinner = new Random(System.currentTimeMillis());
 
   public HasQuarterState(GumballMachine gumballMachine) {
     this.gumballMachine = gumballMachine;
@@ -23,7 +25,12 @@ public class HasQuarterState implements GumballMachineState {
   @Override
   public void turnCrank() {
     System.out.println("You turned...");
-    gumballMachine.setCurrentState(gumballMachine.getSoldState());
+    int winner = randomWinner.nextInt(10);
+    if (winner == 0 && gumballMachine.getCount() > 1) {
+      gumballMachine.setCurrentState(gumballMachine.getWinnerState());
+    } else {
+      gumballMachine.setCurrentState(gumballMachine.getSoldState());
+    }
   }
 
   @Override

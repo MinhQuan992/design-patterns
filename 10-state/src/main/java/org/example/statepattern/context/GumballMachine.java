@@ -6,6 +6,7 @@ import org.example.statepattern.state.HasQuarterState;
 import org.example.statepattern.state.NoQuarterState;
 import org.example.statepattern.state.SoldOutState;
 import org.example.statepattern.state.SoldState;
+import org.example.statepattern.state.WinnerState;
 
 @Getter
 public class GumballMachine {
@@ -13,6 +14,7 @@ public class GumballMachine {
   private final GumballMachineState noQuarterState;
   private final GumballMachineState hasQuarterState;
   private final GumballMachineState soldState;
+  private final GumballMachineState winnerState;
 
   private GumballMachineState currentState;
   private int count;
@@ -22,6 +24,7 @@ public class GumballMachine {
     noQuarterState = new NoQuarterState(this);
     hasQuarterState = new HasQuarterState(this);
     soldState = new SoldState(this);
+    winnerState = new WinnerState(this);
 
     count = numberGumballs;
 
@@ -42,7 +45,7 @@ public class GumballMachine {
 
   public void turnCrank() {
     currentState.turnCrank();
-    if (currentState instanceof SoldState) {
+    if (currentState instanceof SoldState || currentState instanceof WinnerState) {
       currentState.dispense();
       // 'dispense' is just an internal action; a user can't ask the machine to dispense directly.
     }
