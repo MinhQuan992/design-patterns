@@ -12,7 +12,7 @@ This project contains many sample codes for demonstrating the usage of the follo
 - [x] [The Adapter and Facade Patterns](./07-adapter-facade/README.md).
 - [x] [The Template Method Pattern](./08-template-method/README.md).
 - [x] [The Iterator and Composite Patterns](./09-iterator-composite/README.md).
-- [ ] The State Pattern.
+- [x] [The State Pattern](./10-state/README.md).
 - [ ] The Proxy Pattern.
 
 ## 2. Reference
