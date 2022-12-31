@@ -40,4 +40,9 @@ public class WinnerState implements GumballMachineState {
       }
     }
   }
+
+  @Override
+  public void refill() {
+
+  }
 }

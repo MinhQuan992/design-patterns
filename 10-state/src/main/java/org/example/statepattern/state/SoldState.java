@@ -34,4 +34,9 @@ public class SoldState implements GumballMachineState {
       gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
     }
   }
+
+  @Override
+  public void refill() {
+
+  }
 }

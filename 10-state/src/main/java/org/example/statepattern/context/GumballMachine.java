@@ -51,6 +51,12 @@ public class GumballMachine {
     }
   }
 
+  public void refill(int numberGumballs) {
+    count += numberGumballs;
+    System.out.println("The gumball machine was just refilled; its new count is: " + count);
+    currentState.refill();
+  }
+
   public void setCurrentState(GumballMachineState currentState) {
     this.currentState = currentState;
   }

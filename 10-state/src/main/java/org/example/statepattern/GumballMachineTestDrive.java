@@ -20,5 +20,8 @@ public class GumballMachineTestDrive {
     gumballMachine.ejectQuarter();
 
     System.out.println(gumballMachine);
+
+    gumballMachine.refill(3);
+    System.out.println(gumballMachine);
   }
 }

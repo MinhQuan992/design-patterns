@@ -37,4 +37,9 @@ public class HasQuarterState implements GumballMachineState {
   public void dispense() {
     System.out.println("No gumball dispensed");
   }
+
+  @Override
+  public void refill() {
+
+  }
 }

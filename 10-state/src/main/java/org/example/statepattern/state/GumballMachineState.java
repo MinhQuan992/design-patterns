@@ -5,4 +5,5 @@ public interface GumballMachineState {
   void ejectQuarter();
   void turnCrank();
   void dispense();
+  void refill();
 }
