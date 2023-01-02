@@ -19,6 +19,7 @@
     <module>08-template-method</module>
     <module>09-iterator-composite</module>
     <module>10-state</module>
+    <module>11-proxy</module>
   </modules>
 
   <name>design-patterns</name>
