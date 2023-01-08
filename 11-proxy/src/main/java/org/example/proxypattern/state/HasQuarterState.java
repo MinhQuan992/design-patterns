@@ -1,10 +1,13 @@
 package org.example.proxypattern.state;
 
+import java.io.Serial;
 import java.util.Random;
 import org.example.proxypattern.context.GumballMachine;
 
 public class HasQuarterState implements GumballMachineState {
-  private final GumballMachine gumballMachine;
+  @Serial
+  private static final long serialVersionUID = 2L;
+  private transient final GumballMachine gumballMachine;
   private final Random randomWinner = new Random(System.currentTimeMillis());
 
   public HasQuarterState(GumballMachine gumballMachine) {

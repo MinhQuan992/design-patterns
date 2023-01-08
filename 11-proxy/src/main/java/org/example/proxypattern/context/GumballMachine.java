@@ -1,5 +1,7 @@
 package org.example.proxypattern.context;
 
+import java.rmi.RemoteException;
+import java.rmi.server.UnicastRemoteObject;
 import lombok.Getter;
 import org.example.proxypattern.state.GumballMachineState;
 import org.example.proxypattern.state.HasQuarterState;
@@ -9,23 +11,25 @@ import org.example.proxypattern.state.SoldState;
 import org.example.proxypattern.state.WinnerState;
 
 @Getter
-public class GumballMachine {
+public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {
   private final GumballMachineState soldOutState;
   private final GumballMachineState noQuarterState;
   private final GumballMachineState hasQuarterState;
   private final GumballMachineState soldState;
   private final GumballMachineState winnerState;
+  private final String location;
 
   private GumballMachineState currentState;
   private int count;
 
-  public GumballMachine(int numberGumballs) {
+  public GumballMachine(String location, int numberGumballs) throws RemoteException {
     soldOutState = new SoldOutState(this);
     noQuarterState = new NoQuarterState(this);
     hasQuarterState = new HasQuarterState(this);
     soldState = new SoldState(this);
     winnerState = new WinnerState(this);
 
+    this.location = location;
     count = numberGumballs;
 
     if (numberGumballs > 0) {

@@ -1,27 +1,22 @@
 package org.example.proxypattern;
 
+import java.rmi.Naming;
 import org.example.proxypattern.context.GumballMachine;
+import org.example.proxypattern.context.GumballMachineRemote;
 
 public class GumballMachineTestDrive {
   public static void main(String[] args) {
-    GumballMachine gumballMachine = new GumballMachine(5);
+    if (args.length < 2) {
+      System.out.println("GumballMachine <name> <inventory>");
+      System.exit(1);
+    }
 
-    System.out.println(gumballMachine);
-
-    gumballMachine.insertQuarter();
-    gumballMachine.turnCrank();
-
-    System.out.println(gumballMachine);
-
-    gumballMachine.insertQuarter();
-    gumballMachine.turnCrank();
-    gumballMachine.insertQuarter();
-    gumballMachine.turnCrank();
-    gumballMachine.ejectQuarter();
-
-    System.out.println(gumballMachine);
-
-    gumballMachine.refill(3);
-    System.out.println(gumballMachine);
+    try {
+      int count = Integer.parseInt(args[1]);
+      GumballMachineRemote gumballMachineRemote = new GumballMachine(args[0], count);
+      Naming.rebind("//" + args[0] + "/gumballmachine", gumballMachineRemote);
+    } catch (Exception ex) {
+      ex.printStackTrace();
+    }
   }
 }

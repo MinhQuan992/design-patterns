@@ -1,6 +1,8 @@
 package org.example.proxypattern.state;
 
-public interface GumballMachineState {
+import java.io.Serializable;
+
+public interface GumballMachineState extends Serializable {
   void insertQuarter();
   void ejectQuarter();
   void turnCrank();

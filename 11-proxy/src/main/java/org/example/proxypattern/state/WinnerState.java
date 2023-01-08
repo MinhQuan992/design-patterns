@@ -1,9 +1,12 @@
 package org.example.proxypattern.state;
 
+import java.io.Serial;
 import org.example.proxypattern.context.GumballMachine;
 
 public class WinnerState implements GumballMachineState {
-  private final GumballMachine gumballMachine;
+  @Serial
+  private static final long serialVersionUID = 2L;
+  private transient final GumballMachine gumballMachine;
 
   public WinnerState(GumballMachine gumballMachine) {
     this.gumballMachine = gumballMachine;
