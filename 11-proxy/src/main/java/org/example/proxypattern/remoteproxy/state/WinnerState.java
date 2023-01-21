@@ -1,14 +1,14 @@
-package org.example.proxypattern.state;
+package org.example.proxypattern.remoteproxy.state;
 
 import java.io.Serial;
-import org.example.proxypattern.context.GumballMachine;
+import org.example.proxypattern.remoteproxy.context.GumballMachine;
 
-public class SoldState implements GumballMachineState {
+public class WinnerState implements GumballMachineState {
   @Serial
   private static final long serialVersionUID = 2L;
   private transient final GumballMachine gumballMachine;
 
-  public SoldState(GumballMachine gumballMachine) {
+  public WinnerState(GumballMachine gumballMachine) {
     this.gumballMachine = gumballMachine;
   }
 
@@ -30,11 +30,17 @@ public class SoldState implements GumballMachineState {
   @Override
   public void dispense() {
     gumballMachine.releaseBall();
-    if (gumballMachine.getCount() > 0) {
-      gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
-    } else {
-      System.out.println("Oops, out of gumballs!");
+    if (gumballMachine.getCount() == 0) {
       gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
+    } else {
+      gumballMachine.releaseBall();
+      System.out.println("YOU'RE A WINNER! You got two gumballs for your quarter");
+      if (gumballMachine.getCount() > 0) {
+        gumballMachine.setCurrentState(gumballMachine.getNoQuarterState());
+      } else {
+        System.out.println("Oops, out of gumballs!");
+        gumballMachine.setCurrentState(gumballMachine.getSoldOutState());
+      }
     }
   }
 

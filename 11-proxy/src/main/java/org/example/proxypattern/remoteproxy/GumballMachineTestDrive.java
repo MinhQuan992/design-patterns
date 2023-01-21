@@ -1,8 +1,8 @@
-package org.example.proxypattern;
+package org.example.proxypattern.remoteproxy;
 
 import java.rmi.Naming;
-import org.example.proxypattern.context.GumballMachine;
-import org.example.proxypattern.context.GumballMachineRemote;
+import org.example.proxypattern.remoteproxy.context.GumballMachine;
+import org.example.proxypattern.remoteproxy.context.GumballMachineRemote;
 
 public class GumballMachineTestDrive {
   public static void main(String[] args) {

@@ -1,7 +1,7 @@
-package org.example.proxypattern.state;
+package org.example.proxypattern.remoteproxy.state;
 
 import java.io.Serial;
-import org.example.proxypattern.context.GumballMachine;
+import org.example.proxypattern.remoteproxy.context.GumballMachine;
 
 public class NoQuarterState implements GumballMachineState {
   @Serial

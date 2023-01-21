@@ -1,8 +1,8 @@
-package org.example.proxypattern.context;
+package org.example.proxypattern.remoteproxy.context;
 
 import java.rmi.Remote;
 import java.rmi.RemoteException;
-import org.example.proxypattern.state.GumballMachineState;
+import org.example.proxypattern.remoteproxy.state.GumballMachineState;
 
 public interface GumballMachineRemote extends Remote {
   int getCount() throws RemoteException;

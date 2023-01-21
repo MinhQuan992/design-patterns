@@ -1,14 +1,14 @@
-package org.example.proxypattern.context;
+package org.example.proxypattern.remoteproxy.context;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
 import lombok.Getter;
-import org.example.proxypattern.state.GumballMachineState;
-import org.example.proxypattern.state.HasQuarterState;
-import org.example.proxypattern.state.NoQuarterState;
-import org.example.proxypattern.state.SoldOutState;
-import org.example.proxypattern.state.SoldState;
-import org.example.proxypattern.state.WinnerState;
+import org.example.proxypattern.remoteproxy.state.GumballMachineState;
+import org.example.proxypattern.remoteproxy.state.HasQuarterState;
+import org.example.proxypattern.remoteproxy.state.NoQuarterState;
+import org.example.proxypattern.remoteproxy.state.SoldOutState;
+import org.example.proxypattern.remoteproxy.state.SoldState;
+import org.example.proxypattern.remoteproxy.state.WinnerState;
 
 @Getter
 public class GumballMachine extends UnicastRemoteObject implements GumballMachineRemote {

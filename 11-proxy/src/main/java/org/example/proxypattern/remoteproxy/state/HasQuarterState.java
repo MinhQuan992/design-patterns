@@ -1,8 +1,8 @@
-package org.example.proxypattern.state;
+package org.example.proxypattern.remoteproxy.state;
 
 import java.io.Serial;
 import java.util.Random;
-import org.example.proxypattern.context.GumballMachine;
+import org.example.proxypattern.remoteproxy.context.GumballMachine;
 
 public class HasQuarterState implements GumballMachineState {
   @Serial

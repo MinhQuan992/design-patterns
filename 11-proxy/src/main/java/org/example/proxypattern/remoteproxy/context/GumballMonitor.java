@@ -1,4 +1,4 @@
-package org.example.proxypattern.context;
+package org.example.proxypattern.remoteproxy.context;
 
 import java.rmi.RemoteException;
 
