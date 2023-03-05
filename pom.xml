@@ -20,6 +20,7 @@
     <module>09-iterator-composite</module>
     <module>10-state</module>
     <module>11-proxy</module>
+    <module>12-compound</module>
   </modules>
 
   <name>design-patterns</name>

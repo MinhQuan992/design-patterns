@@ -14,6 +14,7 @@ This project contains many sample codes for demonstrating the usage of the follo
 - [x] [The Iterator and Composite Patterns](./09-iterator-composite/README.md).
 - [x] [The State Pattern](./10-state/README.md).
 - [x] [The Proxy Pattern](./11-proxy/README.md).
+- [x] [The Compound Patterns](./12-compound/README.md).
 
 ## 2. Reference
 - The problem in each module is from the book [Head First Design Patterns, 2nd Edition](https://www.oreilly.com/library/view/head-first-design/9781492077992/) by Eric Freeman and Elisabeth Robson.
